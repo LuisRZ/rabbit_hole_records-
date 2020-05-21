@@ -1,0 +1,955 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?ktbp5n');
+    src:  url('../fonts/icomoon.eot?ktbp5n#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?ktbp5n') format('truetype'),
+      url('../fonts/icomoon.woff?ktbp5n') format('woff'),
+      url('../fonts/icomoon.svg?ktbp5n#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+/* font-family: 'Indie Flower', cursive;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Shadows Into Light', cursive; */
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.section{
+    background-image: url(../img/3m.jpg);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    width: 100%;
+    height: 480px;
+    clip-path: polygon(0 0, 0 100%, 100% calc(100% - 5vw), 100% 0);
+    top: 0;
+    z-index: -1;
+}
+
+    /* HEADER y NAV */
+
+.header{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.503);
+    width: 12%;
+    height: 800px;
+    top: 0;
+    left: 0;
+    display: block;
+    position: fixed;
+}
+.header nav ul{
+    list-style:none;
+    padding: 3px;
+    margin: 480px 0 0 40px;
+} 
+.header nav ul li{
+    display: block;
+    width: max-content;
+    padding: 6px;
+}
+nav ul li a{
+    font-family:'Shadows Into Light', cursive; 
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 2px 4px;
+    transition: all 0.5s ease; 
+}
+nav ul li a:hover{
+    color: #ff0101;
+    transform: scale(1.2);
+    text-decoration: underline;
+}
+nav ul li a.activo{
+    color: #ff0101;
+    font-weight: bold;
+    text-decoration: underline; 
+}
+.title{
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1em;
+    margin-bottom: 30px;
+}
+.contenido{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 960px;
+    display: grid;
+    justify-content: space-around;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    grid-gap: 5%;
+    grid-template-columns: repeat(4, 20%);
+    grid-template-rows:  192px repeat(auto);
+    grid-template-areas:"c1  c2  c3  c4"
+                        "c5  c6  c7  c8"
+                        "c9  c10 c11 c12"
+                        "c13 c14 c15 c16"
+                        "c17 c18 c19 c20"
+                        "c21 c22 c23 c24";
+}
+
+/* GRILLA DISCOS */
+
+/* c1 */
+.contenido .c1{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: 192px;
+    background-image: url(../img/bowie1.jpg);
+    background-size: contain;
+    grid-area: c1;
+    transition: all 1s ease;
+}
+.contenido .c1:hover{
+    cursor: pointer;
+    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
+}
+.contenido .c1 .title{ 
+    width: 100%;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    text-decoration: none;
+    bottom: 0;
+    opacity: 0;
+    transition: all 1.5s ease;
+} 
+.contenido .c1 .title h5{
+    margin: 0 auto;
+}
+.contenido .c1:hover .title{
+    opacity:1;
+    color:white;
+} 
+
+/* c2 */
+.contenido .c2{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: 192px;
+    background-image: url(../img/bowie2.jpg);
+    background-size: contain;
+    grid-area: c2;
+    transition: all 1s ease;
+}
+.contenido .c2:hover{
+    cursor:pointer;
+    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
+}
+.contenido .c2 .title{ 
+    width: 100%;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    text-decoration: none;
+    bottom: 0;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.contenido .c2 .title h5{
+    margin: 0 auto;
+}
+.contenido .c2:hover .title{
+    opacity:1;
+    color:white;
+}
+
+/* c3 */
+.contenido .c3{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: 192px;
+    background-image: url(../img/bowie3.jpg);
+    background-size: contain;
+    grid-area: c3;
+    transition: all 1s ease;
+}
+.contenido .c3:hover{
+    cursor: pointer;
+    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
+}
+.contenido .c3 .title{ 
+    width: 100%;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    text-decoration: none;
+    bottom: 0;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.contenido .c3 .title h5{
+    margin: 0 auto;
+}
+.contenido .c3:hover .title{
+    opacity:1;
+    color:white;
+}
+
+/* c4 */
+.contenido .c4{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: 192px;
+    background-image: url(../img/bowie4.jpg);
+    background-size: contain;
+    grid-area: c4;
+    transition: all 1s ease;
+} 
+.contenido .c4:hover{
+    cursor: pointer;
+    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
+}
+.contenido .c4 .title{ 
+    width: 100%;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    text-decoration: none;
+    bottom: 0;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.contenido .c4 .title h5{
+    margin: 0 auto;
+}
+.contenido .c4:hover .title{
+    opacity:1;
+    color:white;
+} 
+
+/* c5 */
+.contenido .c5{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: 192px;
+    background-image: url(../img/bowie5.jpg);
+    background-size: contain;
+    grid-area: c5;
+    transition: all 1s ease;
+} 
+.contenido .c5:hover{
+    cursor: pointer;
+    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
+}
+.contenido .c5 .title{ 
+    width: 100%;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    text-decoration: none;
+    bottom: 0;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.contenido .c5 .title h5{
+    margin: 0 auto;
+}
+.contenido .c5:hover .title{
+    opacity:1;
+    color:white;
+} 
+
+/* c6 */
+.contenido .c6{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: 192px;
+    background-image: url(../img/bowie6.jpg);
+    background-size: contain;
+    grid-area: c6;
+    transition: all 1s ease;
+} 
+.contenido .c6:hover{
+    cursor: pointer;
+    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
+}
+.contenido .c6 .title{ 
+    width: 100%;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    text-decoration: none;
+    bottom: 0;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.contenido .c6 .title h5{
+    margin: 0 auto;
+}
+.contenido .c6:hover .title{
+    opacity:1;
+    color:white;
+} 
+
+/* c7 */
+.contenido .c7{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: 192px;
+    background-image: url(../img/bowie7.jpg);
+    background-size: contain;
+    grid-area: c7;
+    transition: all 1s ease;
+} 
+.contenido .c7:hover{
+    cursor: pointer;
+    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
+}
+.contenido .c7 .title{ 
+    width: 100%;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    text-decoration: none;
+    bottom: 0;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.contenido .c7 .title h5{
+    margin: 0 auto;
+}
+.contenido .c7:hover .title{
+    opacity:1;
+    color:white;
+} 
+
+/* c8 */
+.contenido .c8{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: 192px;
+    background-image: url(../img/bowie8.jpg);
+    background-size: contain;
+    grid-area: c8;
+    transition: all 1s ease;
+} 
+.contenido .c8:hover{
+    cursor: pointer;
+    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
+}
+.contenido .c8 .title{ 
+    width: 100%;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    text-decoration: none;
+    bottom: 0;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.contenido .c8 .title h5{
+    margin: 0 auto;
+}
+.contenido .c8:hover .title{
+    opacity:1;
+    color:white;
+} 
+
+/* c9 */
+.contenido .c9{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: 192px;
+    background-image: url(../img/nick1.jpg);
+    background-size: contain;
+    grid-area: c9;
+    transition: all 1s ease;
+} 
+.contenido .c9:hover{
+    cursor: pointer;
+    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
+}
+.contenido .c9 .title{ 
+    width: 100%;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    text-decoration: none;
+    bottom: 0;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.contenido .c9 .title h5{
+    margin: 0 auto;
+}
+.contenido .c9:hover .title{
+    opacity:1;
+    color:white;
+} 
+
+/* c10 */
+.contenido .c10{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: 192px;
+    background-image: url(../img/nick2.jpg);
+    background-size: contain;
+    grid-area: c10;
+    transition: all 1s ease;
+} 
+.contenido .c10:hover{
+    cursor: pointer;
+    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
+}
+.contenido .c10 .title{ 
+    width: 100%;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    text-decoration: none;
+    bottom: 0;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.contenido .c10 .title h5{
+    margin: 0 auto;
+}
+.contenido .c10:hover .title{
+    opacity:1;
+    color:white;
+} 
+
+/* c11 */
+.contenido .c11{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: 192px;
+    background-image: url(../img/nick3.jpg);
+    background-size: contain;
+    grid-area: c11;
+    transition: all 1s ease;
+} 
+.contenido .c11:hover{
+    cursor: pointer;
+    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
+}
+.contenido .c11 .title{ 
+    width: 100%;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    text-decoration: none;
+    bottom: 0;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.contenido .c11 .title h5{
+    margin: 0 auto;
+}
+.contenido .c11:hover .title{
+    opacity:1;
+    color:white;
+} 
+
+/* c12 */
+.contenido .c12{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: 192px;
+    background-image: url(../img/nick4.jpg);
+    background-size: contain;
+    grid-area: c12;
+    transition: all 1s ease;
+} 
+.contenido .c12:hover{
+    cursor: pointer;
+    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
+}
+.contenido .c12 .title{ 
+    width: 100%;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    text-decoration: none;
+    bottom: 0;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.contenido .c12 .title h5{
+    margin: 0 auto;
+}
+.contenido .c12:hover .title{
+    opacity:1;
+    color:white;
+} 
+
+/* c13 */
+.contenido .c13{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: 192px;
+    background-image: url(../img/pj1.jpg);
+    background-size: contain;
+    grid-area: c13;
+    transition: all 1s ease;
+} 
+.contenido .c13:hover{
+    cursor: pointer;
+    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
+}
+.contenido .c13 .title{ 
+    width: 100%;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    text-decoration: none;
+    bottom: 0;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.contenido .c13 .title h5{
+    margin: 0 auto;
+}
+.contenido .c13:hover .title{
+    opacity:1;
+    color:white;
+} 
+
+/* c14 */
+.contenido .c14{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: 192px;
+    background-image: url(../img/pj2.jpg);
+    background-size: contain;
+    grid-area: c14;
+    transition: all 1s ease;
+} 
+.contenido .c14:hover{
+    cursor: pointer;
+    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
+}
+.contenido .c14 .title{ 
+    width: 100%;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    text-decoration: none;
+    bottom: 0;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.contenido .c14 .title h5{
+    margin: 0 auto;
+}
+.contenido .c14:hover .title{
+    opacity:1;
+    color:white;
+} 
+
+/* c15 */
+.contenido .c15{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: 192px;
+    background-image: url(../img/pj3.jpg);
+    background-size: contain;
+    grid-area: c15;
+    transition: all 1s ease;
+} 
+.contenido .c15:hover{
+    cursor: pointer;
+    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
+}
+.contenido .c15 .title{ 
+    width: 100%;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    text-decoration: none;
+    bottom: 0;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.contenido .c15 .title h5{
+    margin: 0 auto;
+}
+.contenido .c15:hover .title{
+    opacity:1;
+    color:white;
+} 
+
+/* c16 */
+.contenido .c16{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: 192px;
+    background-image: url(../img/pj4.jpg);
+    background-size: contain;
+    grid-area: c16;
+    transition: all 1s ease;
+} 
+.contenido .c16:hover{
+    cursor: pointer;
+    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
+}
+.contenido .c16 .title{ 
+    width: 100%;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    text-decoration: none;
+    bottom: 0;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.contenido .c16 .title h5{
+    margin: 0 auto;
+}
+.contenido .c16:hover .title{
+    opacity:1;
+    color:white;
+} 
+
+/* c17 */
+.contenido .c17{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: 192px;
+    background-image: url(../img/echo1.jpg);
+    background-size: contain;
+    grid-area: c17;
+    transition: all 1s ease;
+} 
+.contenido .c17:hover{
+    cursor: pointer;
+    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
+}
+.contenido .c17 .title{ 
+    width: 100%;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    text-decoration: none;
+    bottom: 0;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.contenido .c17 .title h5{
+    margin: 0 auto;
+}
+.contenido .c17:hover .title{
+    opacity:1;
+    color:white;
+} 
+
+/* c18 */
+.contenido .c18{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: 192px;
+    background-image: url(../img/echo2.jpg);
+    background-size: contain;
+    grid-area: c18;
+    transition: all 1s ease;
+} 
+.contenido .c18:hover{
+    cursor: pointer;
+    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
+}
+.contenido .c18 .title{ 
+    width: 100%;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    text-decoration: none;
+    bottom: 0;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.contenido .c18 .title h5{
+    margin: 0 auto;
+}
+.contenido .c18:hover .title{
+    opacity:1;
+    color:white;
+} 
+
+/* c19 */
+.contenido .c19{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: 192px;
+    background-image: url(../img/echo3.jpg);
+    background-size: contain;
+    grid-area: c19;
+    transition: all 1s ease;
+} 
+.contenido .c19:hover{
+    cursor: pointer;
+    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
+}
+.contenido .c19 .title{ 
+    width: 100%;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    text-decoration: none;
+    bottom: 0;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.contenido .c19 .title h5{
+    margin: 0 auto;
+}
+.contenido .c19:hover .title{
+    opacity:1;
+    color:white;
+} 
+
+/* c20 */
+.contenido .c20{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: 192px;
+    background-image: url(../img/echo4.jpg);
+    background-size: contain;
+    grid-area: c20;
+    transition: all 1s ease;
+} 
+.contenido .c20:hover{
+    cursor: pointer;
+    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
+}
+.contenido .c20 .title{ 
+    width: 100%;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    text-decoration: none;
+    bottom: 0;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.contenido .c20 .title h5{
+    margin: 0 auto;
+}
+.contenido .c20:hover .title{
+    opacity:1;
+    color:white;
+} 
+
+/* c21 */
+.contenido .c21{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: 192px;
+    background-image: url(../img/echo5.jpg);
+    background-size: contain;
+    grid-area: c21;
+    transition: all 1s ease;
+} 
+.contenido .c21:hover{
+    cursor: pointer;
+    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
+}
+.contenido .c21 .title{ 
+    width: 100%;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    text-decoration: none;
+    bottom: 0;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.contenido .c21 .title h5{
+    margin: 0 auto;
+}
+.contenido .c21:hover .title{
+    opacity:1;
+    color:white;
+} 
+
+/* c22 */
+.contenido .c22{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: 192px;
+    background-image: url(../img/echo6.jpg);
+    background-size: contain;
+    grid-area: c22;
+    transition: all 1s ease;
+} 
+.contenido .c22:hover{
+    cursor: pointer;
+    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
+}
+.contenido .c22 .title{ 
+    width: 100%;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    text-decoration: none;
+    bottom: 0;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.contenido .c22 .title h5{
+    margin: 0 auto;
+}
+.contenido .c22:hover .title{
+    opacity:1;
+    color:white;
+} 
+
+/* c23 */
+.contenido .c23{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: 192px;
+    background-image: url(../img/iggy1.jpg);
+    background-size: contain;
+    grid-area: c23;
+    transition: all 1s ease;
+} 
+.contenido .c23:hover{
+    cursor: pointer;
+    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
+}
+.contenido .c23 .title{ 
+    width: 100%;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    text-decoration: none;
+    bottom: 0;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.contenido .c23 .title h5{
+    margin: 0 auto;
+}
+.contenido .c23:hover .title{
+    opacity:1;
+    color:white;
+} 
+
+/* c24 */
+.contenido .c24{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: 192px;
+    background-image: url(../img/iggy2.jpg);
+    background-size: contain;
+    grid-area: c24;
+    transition: all 1s ease;
+} 
+.contenido .c24:hover{
+    cursor: pointer;
+    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
+}
+.contenido .c24 .title{ 
+    width: 100%;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    text-decoration: none;
+    bottom: 0;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.contenido .c24 .title h5{
+    margin: 0 auto;
+}
+.contenido .c24:hover .title{
+    opacity:1;
+    color:white;
+} 
+
+/*FIN GRILLA DE CONTENIDO*/
+
+/*FOOTER C/ REDES SOCIALES*/
+
+footer{
+    position: absolute;
+    top: 30px;
+    width: 100%;
+   height: 450px;
+}
+footer .rabbit{
+    margin: 0 auto;
+}
+footer .rabbit img{
+ height: 100px;
+}
+footer .redes{
+    width: 100%;
+    height: min-content;
+} 
+footer .redes nav ul{
+    list-style: none;
+    margin: 20px 0 0 55px;
+}
+footer .redes nav ul li{
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+}
+footer .redes nav ul li a{
+    font-size: 25px;
+    color: white;
+    display: block;
+    text-decoration: none;
+    transition: all 0.5s ease; 
+}
+li:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.icon-facebook2:before, .icon-twitter:before, 
+.icon-instagram:before, .icon-soundcloud2:before,
+.icon-spotify:before, .icon-youtube:before{
+  font-family: 'icomoon';
+}
+.icon-facebook2:before {
+    content: "\ea91";
+  }
+  .icon-instagram:before {
+    content: "\ea92";
+  }
+  .icon-spotify:before {
+    content: "\ea94";
+  }
+  .icon-twitter:before {
+    content: "\ea96";
+  }
+  .icon-youtube:before {
+    content: "\ea9d";
+  }
+  .icon-soundcloud2:before {
+    content: "\eac4";
+  }

@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?ktbp5n');
+    src:  url('../fonts/icomoon.eot?ktbp5n#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?ktbp5n') format('truetype'),
+      url('../fonts/icomoon.woff?ktbp5n') format('woff'),
+      url('../fonts/icomoon.svg?ktbp5n#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  /* font-family: 'Indie Flower', cursive;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Shadows Into Light', cursive; */
+
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.holder{
+   
+    width: max-content;
+    height: max-content;
+    margin: 0 auto;
+    position: relative;
+}
+header{
+    background-image: url(../img/cassette.jpg);
+    width: 920px;
+    height:580px;
+    margin: 20px auto;
+} 
+header h1{
+    font-family: 'Shadows Into Light', cursive;
+    color: rgb(85, 50, 50);
+    font-size: 40px;
+    margin: 57px 0 0 250px;
+    position: absolute;
+}
+header nav ul{
+    padding: 0;
+    margin: 95px 0 0 60px;
+    width: 690px;
+    list-style:none;
+    position: absolute;
+} 
+header nav ul li{
+    display: inline-block;
+    width: 14%;
+    padding: 6px;
+}
+nav ul li a{
+    font-family:'Shadows Into Light', cursive;
+    font-size: 30px;
+    color: rgb(85, 50, 50);
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 2px 4px;
+    transition: all 0.5s ease; 
+}
+nav ul li a:hover{
+    color: #ff0101;
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+nav ul li a.activo{
+    color: #ff0101;
+    font-weight: bold;
+    text-decoration: underline;
+
+}
+
+
+/*footer con redes sociales*/
+
+footer{
+    width: 50%;
+    height: 100px;
+    margin: 30px auto;
+    position: relative;
+}
+footer .rabbit img{
+   width: 125px;
+   padding: 10px;
+   float: left;
+   transition: all 1s ease;
+}
+img:hover{
+    cursor: pointer;
+    transform: rotate(360deg) scale(1.2);
+}
+
+footer .redes{
+    width: 300px;
+    height: 100px;
+    float: right;
+} 
+footer .redes nav ul{
+    list-style: none;
+    display: flex;
+   
+    padding: 0;
+    margin: 35px;
+}
+footer .redes nav ul li{
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+}
+footer .redes nav ul li a{
+    font-size: 25px;
+    color: black;
+    display: block;
+    text-decoration: none;
+    transition: all 0.5s ease; 
+}
+li:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.icon-facebook2:before, .icon-twitter:before, 
+.icon-instagram:before, .icon-soundcloud2:before,
+.icon-spotify:before, .icon-youtube:before{
+  font-family: 'icomoon';
+}
+.icon-facebook2:before {
+    content: "\ea91";
+  }
+  .icon-instagram:before {
+    content: "\ea92";
+  }
+  .icon-spotify:before {
+    content: "\ea94";
+  }
+  .icon-twitter:before {
+    content: "\ea96";
+  }
+  .icon-youtube:before {
+    content: "\ea9d";
+  }
+  .icon-soundcloud2:before {
+    content: "\eac4";
+  }
+  
+ 
+
+

@@ -1,0 +1,227 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?ktbp5n');
+    src:  url('../fonts/icomoon.eot?ktbp5n#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?ktbp5n') format('truetype'),
+      url('../fonts/icomoon.woff?ktbp5n') format('woff'),
+      url('../fonts/icomoon.svg?ktbp5n#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+/* font-family: 'Indie Flower', cursive;
+ font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Shadows Into Light', cursive; */
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.section{
+  /* background-image: url(../img/autoradio4.jpg); */
+  /* background-size: 100vw 100vh; */
+  /* background-attachment: fixed; */
+  position: relative;
+    background-color: rgba(207, 128, 25, 0.5);
+    height: 400px;
+    color: white;
+    clip-path: polygon(0 0, 8% 70%, 100% calc(100% - 22vw), 100% 0);
+    z-index: -1;
+}
+.section .titulo{
+  /* margin-left: 10px;
+  margin-top: 50px; */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 70px;
+  height:120px;
+  line-height: 120px;
+  max-width:100%;
+  text-align: center;
+  background-color: rgba(0,0,0,0.8);
+  transform: skewY(-9deg);
+}
+.section .titulo h1{
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 175px;
+  width: max-content;
+  color: rgb(224, 173, 31);
+}
+.header{
+  position: relative;
+    background-color: rgba(0, 0, 0, 0.503);
+    clip-path: polygon(0 0, 0 100%, 50% 100%, 100% 0);
+    width: 12%;
+    height: 800px;
+    top: 0;
+    left: 0;
+    display: block;
+    position: fixed;
+}
+.header .logo img{
+  background-color: rgba(228, 156, 24, 0.5);
+  width: 180px;
+  margin-top: 20px;
+  margin-left:20px;
+  clip-path: circle() ;
+}
+.header nav ul{
+  list-style:none;
+  padding: 3px;
+  margin: 380px 0 0 10px;
+} 
+.header nav ul li{
+  display: block;
+  width: max-content;
+  padding: 6px;
+}
+nav ul li a{
+  font-family:'Shadows Into Light', cursive; 
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  padding: 2px 4px;
+  transition: all 0.5s ease; 
+}
+nav ul li a:hover{
+  color: #ff0101;
+  transform: scale(1.2);
+  text-decoration: underline;
+}
+nav ul li a.activo{
+  color: #ff0101;
+  font-weight: bold;
+  text-decoration: underline; 
+}
+
+/* REDES SOCIALES */
+
+.header .redes{
+  position: relative;
+  width: min-content;
+  height: min-content;
+} 
+.header .redes nav ul{
+  position: absolute;
+  list-style: none;
+  margin-left: 20px;
+  margin-top: 40px;
+}
+.header .redes nav ul li{
+ 
+  /* background-color: tomato; */
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  
+}
+.redes nav ul li a{
+  font-size: 25px;
+  color: white;
+  display: block;
+  text-decoration: none;
+  transition: all 0.5s ease; 
+}
+
+/* GRILLA */
+
+.contenido{
+  margin: 0 auto;
+  width: 100%;
+  max-width: 960px;
+  display: grid;
+  justify-content: space-around;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 20px;
+  grid-gap: 2%;
+  /* padding: 5%; */
+  grid-template-columns: 30% 1fr;
+  grid-template-rows: repeat(4, 250px);
+  grid-template-areas:"c1  c2" 
+                      "c3  c4"
+                      "c5  c6"
+                      "c7  c8"
+                      "c9  c10";
+  }
+
+
+
+.contenido .c1{
+  background-image: url(../img/peter1.jpg);
+  grid-area: c1;
+}
+.contenido .c2{
+  grid-area: c2;
+}
+.contenido .c3{
+  grid-area: c3;
+}
+.contenido .c4{
+  grid-area: c4;
+}
+.contenido .c5{
+  grid-area: c5;
+}
+.contenido .c6{
+  grid-area: c6;
+}
+.contenido .c7{
+  grid-area: c7;
+}
+.contenido .c8{
+  grid-area: c8;
+}
+.contenido .c9{
+  grid-area: c9;
+}
+.contenido .c10{
+  grid-area: c10;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.icon-facebook2:before, .icon-twitter:before, 
+.icon-instagram:before, .icon-soundcloud2:before,
+.icon-spotify:before, .icon-youtube:before{
+  font-family: 'icomoon';
+}
+.icon-facebook2:before {
+    content: "\ea91";
+  }
+  .icon-instagram:before {
+    content: "\ea92";
+  }
+  .icon-spotify:before {
+    content: "\ea94";
+  }
+  .icon-twitter:before {
+    content: "\ea96";
+  }
+  .icon-youtube:before {
+    content: "\ea9d";
+  }
+  .icon-soundcloud2:before {
+    content: "\eac4";
+  }

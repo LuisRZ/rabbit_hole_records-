@@ -1,0 +1,148 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?ktbp5n');
+    src:  url('../fonts/icomoon.eot?ktbp5n#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?ktbp5n') format('truetype'),
+      url('../fonts/icomoon.woff?ktbp5n') format('woff'),
+      url('../fonts/icomoon.svg?ktbp5n#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+body{
+    background-image: url(../img/party.jpg);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: monospace;
+}
+form{
+    width: 450px;
+    margin: auto;
+    background: rgba(0,0,0,0.4);
+    padding: 10px 20px; 
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+h2{
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+
+}
+input, textarea{
+   background-color: rgba(250, 250 ,250, 0.7);
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+    border-radius: 7px;
+}
+textarea{
+    height: 150px;
+    resize: none;
+}
+#boton{
+    background: rgba(38, 38, 38, 0.8);
+    color: white;
+    padding: 20px;
+}
+#boton:hover{
+    cursor: pointer;
+}
+@media (max-width:480px){
+    form{
+        width: 100%
+    }
+}
+.titulo h1{
+    width: 300px;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    background: rgba(0,0,0,0.4);
+    margin:auto;
+    margin-top: 20px;
+    border-radius: 7px;
+    font-weight: 500;
+    padding: 60px 20px 550px;
+    box-sizing: border-box;
+}
+
+/*FOOTER C/ REDES SOCIALES*/
+
+footer{
+    position: absolute;
+    width: 95%;
+    height: 100px;
+    margin: 15px;
+    bottom: 15px;
+    display: grid;
+    justify-content: center;
+}
+footer .rabbit img{
+   width: 125px;
+   padding: 10px;
+   float: left;
+   transition: all 1s ease;
+}
+img:hover{
+    cursor: pointer;
+    transform: rotate(360deg) scale(1.2);
+}
+footer .redes{
+    width: 300px;
+    height: 100px;
+    float: right;
+} 
+footer .redes nav ul{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 35px;
+}
+footer .redes nav ul li{
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+}
+footer .redes nav ul li a{
+    font-size: 25px;
+    color:white;
+    display: block;
+    text-decoration: none;
+    transition: all 0.5s ease; 
+}
+li:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.icon-facebook2:before, .icon-twitter:before, 
+.icon-instagram:before, .icon-soundcloud2:before,
+.icon-spotify:before, .icon-youtube:before{
+  font-family: 'icomoon';
+}
+.icon-facebook2:before {
+    content: "\ea91";
+  }
+  .icon-instagram:before {
+    content: "\ea92";
+  }
+  .icon-spotify:before {
+    content: "\ea94";
+  }
+  .icon-twitter:before {
+    content: "\ea96";
+  }
+  .icon-youtube:before {
+    content: "\ea9d";
+  }
+  .icon-soundcloud2:before {
+    content: "\eac4";
+  }
