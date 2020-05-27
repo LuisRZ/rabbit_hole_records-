@@ -16,32 +16,33 @@ font-family: 'Shadows Into Light', cursive; */
 body{
     margin: 0;
     padding: 0;
-}
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f6f6f6; 
+} 
 .section{
-  /* background-image: url(../img/autoradio4.jpg); */
-  /* background-size: 100vw 100vh; */
-  /* background-attachment: fixed; */
+  width: 100%;
   position: relative;
-    background-color: rgba(207, 128, 25, 0.5);
-    height: 400px;
-    color: white;
-    clip-path: polygon(0 0, 8% 70%, 100% calc(100% - 22vw), 100% 0);
-    z-index: -1;
+  background-color: rgba(207, 128, 25, 0.5);
+  height: 400px;
+  color: white;
+  clip-path: polygon(0 0, 0 5%, 8% 68%, 100% calc(100% - 22vw), 100% 0);
+  z-index: -1;
 }
 .section .titulo{
-  /* margin-left: 10px;
-  margin-top: 50px; */
   font-family: Arial, Helvetica, sans-serif;
   font-size: 70px;
-  height:120px;
-  line-height: 120px;
+  height:130px;
+  line-height: 130px;
   max-width:100%;
   text-align: center;
-  background-color: rgba(0,0,0,0.8);
-  transform: skewY(-9deg);
+  background-color: rgba(0, 0, 0, 0.884);
+  transform: skewY(-8deg);
 }
 .section .titulo h1{
-  position: absolute;
   margin-top: 50px;
   margin-left: 175px;
   width: max-content;
@@ -62,13 +63,13 @@ body{
   background-color: rgba(228, 156, 24, 0.5);
   width: 180px;
   margin-top: 20px;
-  margin-left:20px;
+  margin-left: 0px;
   clip-path: circle() ;
 }
 .header nav ul{
   list-style:none;
   padding: 3px;
-  margin: 380px 0 0 10px;
+  margin: 380px 0 0 7px;
 } 
 .header nav ul li{
   display: block;
@@ -110,13 +111,10 @@ nav ul li a.activo{
   margin-top: 40px;
 }
 .header .redes nav ul li{
- 
-  /* background-color: tomato; */
   padding: 5px;
   width: 40px;
   height: 40px;
   margin: 0;
-  
 }
 .redes nav ul li a{
   font-size: 25px;
@@ -128,79 +126,142 @@ nav ul li a.activo{
 
 /* GRILLA */
 
-.contenido{
-  margin: 0 auto;
+.container{
+  padding: 10px 10px 0 10px;
+  background-color: #fff;
   width: 100%;
   max-width: 960px;
-  display: grid;
-  justify-content: space-around;
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 20px;
-  grid-gap: 2%;
-  /* padding: 5%; */
-  grid-template-columns: 30% 1fr;
-  grid-template-rows: repeat(4, 250px);
-  grid-template-areas:"c1  c2" 
-                      "c3  c4"
-                      "c5  c6"
-                      "c7  c8"
-                      "c9  c10";
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-shadow: 20px 20px 20px -5px black; /*para hacer la sombra*/
+  border: 2px solid #ccc;
+  border-radius: 15px;
+}
+.item:nth-child(odd){
+  width: 30%;
+}
+.item:nth-child(even){
+  width: calc(70% - 10px);
+  box-sizing: border-box;
+  background-image: url(../img/tdk.jpg); 
+  background-size: cover;
+  background-position: initial;
+  position: relative;
+}
+.item:nth-child(even) p{
+  font-family: 'Shadows Into Light', cursive;
+  color: rgba(0, 0, 0, 0.686);
+  font-weight: bold;
+  margin-top: 90px;
+  font-size: 1.5em;
+  padding-left:30px;
+}
+.item:nth-child(even) h3{
+  position: absolute;
+  top: 0;
+  font-family: 'Shadows Into Light', cursive;
+  color: rgba(0, 0, 0, 0.686);
+  font-weight: bold;
+  font-size: 1.8em;
+  margin-top: 0;
+  
+}
+.item{
+  margin-bottom: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  min-height: 288px;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #ccc;
+}   
+.item:nth-child(odd) h3{
+  font-family: 'Open Sans Condensed', sans-serif; ;
+  width: 100%;
+  text-align: center;
+  color: rgb(255, 253, 253);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 3em;
+  box-sizing: border-box;
+  transition: all 1s;
+  opacity: 0;
+}
+
+.item:nth-child(odd):hover{
+ cursor: pointer;
+ box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
+}
+.item:nth-child(odd):hover h3{
+  opacity: 1;
+}
+
+/* FOTOS */
+
+.item.uno{
+  background-image: url(../img/bowie.jpg); 
+}
+.item.tres{
+  background-image: url(../img/stones2.jpg); 
+}
+.item.cinco{
+  background-image: url(../img/doors4.jpg); 
+}
+.item.siete{
+  background-image: url(../img/U2.jpg); 
+  background-position: left;
+}
+.item.nueve{
+  background-image: url(../img/echo.jpg); 
+}
+.item.once{
+  background-image: url(../img/love2.jpg); 
+}
+
+
+/* MEDIA-QUERIES */
+
+
+@media screen and (max-width: 850px){
+  .container{
+      flex-direction: column;
   }
-
-
-
-.contenido .c1{
-  background-image: url(../img/peter1.jpg);
-  grid-area: c1;
+  .item:nth-child(odd){
+      width: 100%;
+      position: relative;
+  }
+  .item:nth-child(even){
+      width: 100%;
+  } 
+  .item:nth-child(odd):hover{
+  cursor: pointer;
+  box-shadow: 850px 0 0 rgba(219, 54, 54, 0.503) inset;
+  }
+  .item.nueve{
+      background-image: url(img/echo.jpg); 
+      background-position: top;
+  }
+  .item.once{
+      background-image: url(img/love2.jpg); 
+      background-position: top;
+  }
+  .item:nth-child(odd) h3{
+      width: 100%;
+      position: absolute;
+      margin-top: -10px;
+  }
+  .item:nth-child(odd):hover h3{
+      opacity: 1;
+  }
 }
-.contenido .c2{
-  grid-area: c2;
-}
-.contenido .c3{
-  grid-area: c3;
-}
-.contenido .c4{
-  grid-area: c4;
-}
-.contenido .c5{
-  grid-area: c5;
-}
-.contenido .c6{
-  grid-area: c6;
-}
-.contenido .c7{
-  grid-area: c7;
-}
-.contenido .c8{
-  grid-area: c8;
-}
-.contenido .c9{
-  grid-area: c9;
-}
-.contenido .c10{
-  grid-area: c10;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .icon-facebook2:before, .icon-twitter:before, 
 .icon-instagram:before, .icon-soundcloud2:before,
