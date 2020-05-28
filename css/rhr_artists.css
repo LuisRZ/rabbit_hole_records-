@@ -61,8 +61,9 @@ body{
 .header .logo img{
   background-color: rgba(228, 156, 24, 0.5);
   width: 180px;
-  margin-top: 10px;
-  margin-left: 20px;
+  /* margin-top: 10px;
+  margin-left: 20px; */
+  margin: 20px auto;
   clip-path: circle() ;
 }
 .header nav ul{
@@ -165,7 +166,6 @@ nav ul li a.activo{
   font-weight: bold;
   font-size: 1.8em;
   margin-top: 0;
-  
 }
 .item{
   margin-bottom: 3em;
@@ -195,7 +195,6 @@ nav ul li a.activo{
   transition: all 1s ease;
   opacity: 0;
 }
-
 .item:nth-child(odd):hover{
  cursor: pointer;
  box-shadow: 300px 0 0 rgba(151, 7, 7, 0.693) inset;
@@ -227,9 +226,7 @@ nav ul li a.activo{
   background-image: url(../img/love2.jpg); 
 }
 
-
 /* MEDIA-QUERIES */
-
 
 @media screen and (max-width: 850px){
   .container{
