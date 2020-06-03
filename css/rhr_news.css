@@ -1,0 +1,234 @@
+/* font-family: 'Indie Flower', cursive;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Shadows Into Light', cursive;
+font-family: 'Bungee Inline', cursive;
+font-family: 'Monoton', cursive;
+font-family: 'UnifrakturMaguntia', cursive;*/
+
+body{ 
+    margin: 0 ;
+    padding: 0;
+    background-size: 100vw 100vh;
+    background-image: url(../img/paper9.jpg);
+    background-attachment: fixed;
+    background-color: #f6f6f6;
+}
+.header{
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+}
+.header .text h1{
+    font-family: 'Monoton', cursive;
+    font-size: 2.5em;
+    word-spacing: 0.2em;
+    margin-top: 1em;
+    text-shadow: 0 0 60px white;
+    font-weight: bold;
+}
+.header .logo{
+    margin-top: 1em;
+    filter: drop-shadow( 0 0 50px white);
+}
+.header .logo img{
+    width: 200px;
+    opacity: 0.9;
+}  
+.container{
+    position: relative;
+    display: flex;
+}
+.container .pile img{
+    background-size: contain;
+    width: 700px;
+    height: 620px;
+    margin-left: 100px;
+    filter: drop-shadow(30px 20px 10px black);
+}
+.container .cassettes .stones{
+   position: absolute;
+   left: 230px;
+   top: 35px;
+   width: 400px;
+   height: 50px;
+   cursor: pointer;
+}
+.container .cassettes .bowie{
+    position: absolute;
+    left: 230px;
+    top: 100px;
+    width: 420px;
+    height: 50px;
+    cursor: pointer;
+}
+.container .cassettes .doors{
+    position: absolute;
+    left: 230px;
+    top: 170px;
+    width: 450px;
+    height: 50px;
+    cursor: pointer;
+}
+.container .cassettes .smiths{
+    position: absolute;
+    left: 230px;
+    top: 230px;
+    width:490px;
+    height: 55px;
+    cursor: pointer;
+}
+.container .cassettes .nick{
+    position: absolute;
+    left: 230px;
+    top: 290px;
+    width:470px;
+    height: 60px;
+    cursor: pointer;
+}
+.container .cassettes .lisa{
+    position: absolute;
+    left: 230px;
+    top: 375px;
+    width:470px;
+    height: 30px;
+    cursor: pointer;
+}
+.container .cassettes .leo{
+    position: absolute;
+    left: 230px;
+    top: 450px;
+    width:490px;
+    height: 30px;
+    cursor: pointer;
+}
+.container .cassettes .hole{
+    position: absolute;
+    left: 230px;
+    top: 520px;
+    width:470px;
+    height: 60px;
+    cursor: pointer;
+}
+#newsStones{
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: white;
+    text-align: justify;
+    width: 600px;
+    height: 470px;
+    border: 8px solid white;
+    border-radius: 10px;
+    bottom: 5em;
+    background-image: url(../img/stones5.jpg);
+    background-size: cover;
+    position: absolute;
+    right: 12em;
+    padding: 1em;
+    opacity: 0;
+}
+#newsBowie{
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: white;
+    width: 600px;
+    height: 470px;
+    border: 8px solid white;
+    border-radius: 10px;
+    bottom: 5em;
+    background-image: url(../img/bowie9.jpg);
+    background-size: cover;
+    position: absolute;
+    right: 12em;
+    padding: 1em;
+    opacity: 0;
+}
+#newsDoors{
+    font-family: 'Open Sans Condensed', sans-serif;
+    color:black;
+    width: 600px;
+    height: 470px;
+    border: 8px solid black;
+    border-radius: 10px;
+    bottom: 5em;
+    background-image: url(../img/doors4.jpg);
+    background-size: cover;
+    position: absolute;
+    right: 12em;
+    padding: 0.3em;
+    opacity: 0;
+}
+#newsSmiths{
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: white;
+    width: 600px;
+    height: 470px;
+    border: 8px solid white;
+    border-radius: 10px;
+    bottom: 5em;
+    background-image: url(../img/smiths.jpg);
+    background-size: cover;
+    position: absolute;
+    right: 12em;
+    padding: 1em;
+    opacity: 0;
+}
+#newsNick{
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: white;
+    width: 600px;
+    height: 470px;
+    border: 8px solid white;
+    border-radius: 10px;
+    bottom: 5em;
+    background-image: url(../img/nick7.jpg);
+    background-size: cover;
+    position: absolute;
+    right: 12em;
+    padding: 1em;
+    opacity: 0;
+}
+#newsLisa{
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: white;
+    width: 600px;
+    height: 470px;
+    border: 8px solid black;
+    border-radius: 10px;
+    bottom: 5em;
+    background-image: url(../img/lisa2.jpg);
+    background-size: cover;
+    position: absolute;
+    right: 12em;
+    padding: 1em;
+    opacity: 0;
+}
+#newsLeo{
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: white;
+    width: 600px;
+    height: 470px;
+    border: 8px solid white;
+    border-radius: 10px;
+    bottom: 5em;
+    background-image: url(../img/leo.jpg);
+    background-size: cover;
+    position: absolute;
+    right: 12em;
+    padding: 1em;
+    opacity: 0;
+}
+.container #rabbit{
+    display: block;
+    position: absolute;
+    left: 620px;
+    top: 495px;
+    width:60px;
+    height: 60px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+
+
+
+
+
+    
