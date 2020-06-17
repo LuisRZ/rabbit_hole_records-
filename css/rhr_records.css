@@ -8,928 +8,344 @@
     font-weight: normal;
     font-style: normal;
     font-display: block;
-  }
+}
+
 /* font-family: 'Indie Flower', cursive;
-  font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
   font-family: 'Shadows Into Light', cursive; */
 
 body{
-    margin: 0;
-    padding: 0;
-}
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    background-color: #f6f3ea; 
+    font-family: 'Open Sans Condensed', sans-serif;
+} 
 .section{
+    clip-path: polygon(0 0, 0 calc(100% - 20vw), 50% 80%, 100% calc(100% - 20vw), 100% 0);
     background-image: url(../img/3m.jpg);
-    background-size: 100vw 100vh;
     background-attachment: fixed;
-    width: 100%;
-    height: 480px;
-    clip-path: polygon(0 0, 0 100%, 100% calc(100% - 5vw), 100% 0);
-    top: 0;
     z-index: -1;
+    width: 100%;
+    height: 400px;
 }
-
-    /* HEADER y NAV */
+.section h1{
+    margin: 10px auto; 
+    width: max-content;
+    font-size: 5.5rem;
+    word-spacing: 0.5rem;
+    color: rgb(214, 133, 11);
+}
+  
+/*HEADER*/
 
 .header{
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.503);
-    width: 12%;
+    width: 8%;
     height: 800px;
     top: 0;
     left: 0;
-    display: block;
     position: fixed;
+}
+.header .logo img{
+    background-color: rgba(228, 156, 24, 0.5);
+    width: 100%;
+    margin-top: 10px;
+    clip-path: circle();
 }
 .header nav ul{
     list-style:none;
     padding: 3px;
-    margin: 480px 0 0 40px;
+    margin-top: 25px;
+    margin-left: 20px;
 } 
-.header nav ul li{
+  .header nav ul li{
     display: block;
     width: max-content;
     padding: 6px;
 }
 nav ul li a{
-    font-family:'Shadows Into Light', cursive; 
     font-size: 20px;
-    color: white;
+    color: black;
     text-decoration: none;
-    text-align: center;
     display: block;
     padding: 2px 4px;
     transition: all 0.5s ease; 
 }
 nav ul li a:hover{
     color: #ff0101;
-    transform: scale(1.2);
-    text-decoration: underline;
+    transform: scale(1.3);
 }
 nav ul li a.activo{
     color: #ff0101;
     font-weight: bold;
-    text-decoration: underline; 
 }
-.title{
+  
+  /* REDES SOCIALES */
+  
+.header .redes{
+    position: relative;
+    width: max-content;
+    height: max-content;
+} 
+.header .redes ul{
+    position: absolute;
+    list-style: none;
+    margin-top: 40px;
+}
+.header .redes ul li{
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+ }
+.header .redes ul li a{
+    font-size: 20px;
+    color: black;
+    display: block;
+    text-decoration: none;
+    transition: all 0.5s ease; 
+}
+.redes ul li a:hover{
+    color: #ff0101;
+    transform: scale(1.3);
+}
+
+/*FOOTER*/
+
+footer{
+    align-self: flex-end;
     display: flex;
-    justify-content: center;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 1em;
-    margin-bottom: 30px;
-}
-.contenido{
-    margin: 0 auto;
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0); 
     width: 100%;
-    max-width: 960px;
-    display: grid;
-    justify-content: space-around;
+    padding: 0.5em;
+    opacity: 0;
+}
+footer ul{
+    list-style: none;
+    width: 30%;
+    padding: 0;
+}
+footer ul li a{
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 20px;
-    grid-gap: 5%;
-    grid-template-columns: repeat(4, 20%);
-    grid-template-rows:  192px repeat(auto);
-    grid-template-areas:"c1  c2  c3  c4"
-                        "c5  c6  c7  c8"
-                        "c9  c10 c11 c12"
-                        "c13 c14 c15 c16"
-                        "c17 c18 c19 c20"
-                        "c21 c22 c23 c24";
+    color: white;
+    text-decoration: none;
+    padding: 2px 4px;
+    transition: all 0.5s ease; 
+}
+footer ul li a:hover{
+    color: #ff0101;
+}
+ul li a.activo{
+    color: #ff0101;
+    font-weight: bold;
+}
+footer .redes ul{
+    width: 20%;
+}
+footer .logo img{
+    margin: 1em;
+    width: 16em;
+}
+footer .logo img{
+    background-color: rgba(228, 156, 24, 0.5);
+    width: 270px;
+    margin-top: 10px;
+    clip-path: circle(); 
+}
+.container{
+    padding: 20px 10px 0 10px;
+    background-color: #fff;
+    width: 100%;
+    height:100%;
+    max-width: 940px;
+    min-height: 1300px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-shadow: 20px 20px 20px -5px black; /*para hacer la sombra*/
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    margin-bottom: 5em;
+    box-sizing: border-box;
+}
+.item{
+    width: calc( (100% - 40px) / 3);
+    height: 296px;
+    margin-bottom: 2%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center; 
+    transition: all 1s ease;
+}
+.item:first-child{
+    margin-left: 5px;
+}
+.item:nth-child(3n+1){
+    margin-left: 6px;
+}
+.item:last-child{
+    margin-right: 5px;
+}
+.item a{
+    text-decoration: none;
+}
+.item:hover{
+    cursor: pointer;
+    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
+}
+.item .title h5{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    transition: all 1s ease;
+    opacity: 0;
+}
+.item:hover h5{
+    opacity: 1;
+    color: white;
 }
 
 /* GRILLA DISCOS */
 
 /* c1 */
-.contenido .c1{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    min-height: 192px;
+.container .c1{
     background-image: url(../img/bowie1.jpg);
-    background-size: contain;
-    grid-area: c1;
-    transition: all 1s ease;
 }
-.contenido .c1:hover{
-    cursor: pointer;
-    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
-}
-.contenido .c1 .title{ 
-    width: 100%;
-    position: absolute;
-    display: grid;
-    justify-content: center;
-    text-decoration: none;
-    bottom: 0;
-    opacity: 0;
-    transition: all 1.5s ease;
-} 
-.contenido .c1 .title h5{
-    margin: 0 auto;
-}
-.contenido .c1:hover .title{
-    opacity:1;
-    color:white;
-} 
-
 /* c2 */
-.contenido .c2{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    min-height: 192px;
-    background-image: url(../img/bowie2.jpg);
-    background-size: contain;
-    grid-area: c2;
-    transition: all 1s ease;
+.container .c2{
+   background-image: url(../img/bowie2.jpg);
 }
-.contenido .c2:hover{
-    cursor:pointer;
-    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
-}
-.contenido .c2 .title{ 
-    width: 100%;
-    position: absolute;
-    display: grid;
-    justify-content: center;
-    text-decoration: none;
-    bottom: 0;
-    opacity: 0;
-    transition: all 1.5s ease;
-}
-.contenido .c2 .title h5{
-    margin: 0 auto;
-}
-.contenido .c2:hover .title{
-    opacity:1;
-    color:white;
-}
-
 /* c3 */
-.contenido .c3{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    min-height: 192px;
-    background-image: url(../img/bowie3.jpg);
-    background-size: contain;
-    grid-area: c3;
-    transition: all 1s ease;
+.container .c3{
+   background-image: url(../img/bowie3.jpg);
 }
-.contenido .c3:hover{
-    cursor: pointer;
-    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
-}
-.contenido .c3 .title{ 
-    width: 100%;
-    position: absolute;
-    display: grid;
-    justify-content: center;
-    text-decoration: none;
-    bottom: 0;
-    opacity: 0;
-    transition: all 1.5s ease;
-}
-.contenido .c3 .title h5{
-    margin: 0 auto;
-}
-.contenido .c3:hover .title{
-    opacity:1;
-    color:white;
-}
-
 /* c4 */
-.contenido .c4{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    min-height: 192px;
+.container .c4{
     background-image: url(../img/bowie4.jpg);
-    background-size: contain;
-    grid-area: c4;
-    transition: all 1s ease;
 } 
-.contenido .c4:hover{
-    cursor: pointer;
-    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
-}
-.contenido .c4 .title{ 
-    width: 100%;
-    position: absolute;
-    display: grid;
-    justify-content: center;
-    text-decoration: none;
-    bottom: 0;
-    opacity: 0;
-    transition: all 1.5s ease;
-}
-.contenido .c4 .title h5{
-    margin: 0 auto;
-}
-.contenido .c4:hover .title{
-    opacity:1;
-    color:white;
-} 
-
 /* c5 */
-.contenido .c5{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    min-height: 192px;
+.container .c5{
     background-image: url(../img/bowie5.jpg);
-    background-size: contain;
-    grid-area: c5;
-    transition: all 1s ease;
 } 
-.contenido .c5:hover{
-    cursor: pointer;
-    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
-}
-.contenido .c5 .title{ 
-    width: 100%;
-    position: absolute;
-    display: grid;
-    justify-content: center;
-    text-decoration: none;
-    bottom: 0;
-    opacity: 0;
-    transition: all 1.5s ease;
-}
-.contenido .c5 .title h5{
-    margin: 0 auto;
-}
-.contenido .c5:hover .title{
-    opacity:1;
-    color:white;
-} 
-
 /* c6 */
-.contenido .c6{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    min-height: 192px;
+.container .c6{
     background-image: url(../img/bowie6.jpg);
-    background-size: contain;
-    grid-area: c6;
-    transition: all 1s ease;
 } 
-.contenido .c6:hover{
-    cursor: pointer;
-    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
-}
-.contenido .c6 .title{ 
-    width: 100%;
-    position: absolute;
-    display: grid;
-    justify-content: center;
-    text-decoration: none;
-    bottom: 0;
-    opacity: 0;
-    transition: all 1.5s ease;
-}
-.contenido .c6 .title h5{
-    margin: 0 auto;
-}
-.contenido .c6:hover .title{
-    opacity:1;
-    color:white;
-} 
-
 /* c7 */
-.contenido .c7{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    min-height: 192px;
+.container .c7{
     background-image: url(../img/bowie7.jpg);
-    background-size: contain;
-    grid-area: c7;
-    transition: all 1s ease;
 } 
-.contenido .c7:hover{
-    cursor: pointer;
-    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
-}
-.contenido .c7 .title{ 
-    width: 100%;
-    position: absolute;
-    display: grid;
-    justify-content: center;
-    text-decoration: none;
-    bottom: 0;
-    opacity: 0;
-    transition: all 1.5s ease;
-}
-.contenido .c7 .title h5{
-    margin: 0 auto;
-}
-.contenido .c7:hover .title{
-    opacity:1;
-    color:white;
-} 
-
 /* c8 */
-.contenido .c8{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    min-height: 192px;
+.container .c8{
     background-image: url(../img/bowie8.jpg);
-    background-size: contain;
-    grid-area: c8;
-    transition: all 1s ease;
 } 
-.contenido .c8:hover{
-    cursor: pointer;
-    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
-}
-.contenido .c8 .title{ 
-    width: 100%;
-    position: absolute;
-    display: grid;
-    justify-content: center;
-    text-decoration: none;
-    bottom: 0;
-    opacity: 0;
-    transition: all 1.5s ease;
-}
-.contenido .c8 .title h5{
-    margin: 0 auto;
-}
-.contenido .c8:hover .title{
-    opacity:1;
-    color:white;
-} 
-
 /* c9 */
-.contenido .c9{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    min-height: 192px;
+.container .c9{
     background-image: url(../img/nick1.jpg);
-    background-size: contain;
-    grid-area: c9;
-    transition: all 1s ease;
 } 
-.contenido .c9:hover{
-    cursor: pointer;
-    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
-}
-.contenido .c9 .title{ 
-    width: 100%;
-    position: absolute;
-    display: grid;
-    justify-content: center;
-    text-decoration: none;
-    bottom: 0;
-    opacity: 0;
-    transition: all 1.5s ease;
-}
-.contenido .c9 .title h5{
-    margin: 0 auto;
-}
-.contenido .c9:hover .title{
-    opacity:1;
-    color:white;
-} 
-
 /* c10 */
-.contenido .c10{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    min-height: 192px;
+.container .c10{
     background-image: url(../img/nick2.jpg);
-    background-size: contain;
-    grid-area: c10;
-    transition: all 1s ease;
 } 
-.contenido .c10:hover{
-    cursor: pointer;
-    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
-}
-.contenido .c10 .title{ 
-    width: 100%;
-    position: absolute;
-    display: grid;
-    justify-content: center;
-    text-decoration: none;
-    bottom: 0;
-    opacity: 0;
-    transition: all 1.5s ease;
-}
-.contenido .c10 .title h5{
-    margin: 0 auto;
-}
-.contenido .c10:hover .title{
-    opacity:1;
-    color:white;
-} 
-
 /* c11 */
-.contenido .c11{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    min-height: 192px;
+.container .c11{
     background-image: url(../img/nick3.jpg);
-    background-size: contain;
-    grid-area: c11;
-    transition: all 1s ease;
 } 
-.contenido .c11:hover{
-    cursor: pointer;
-    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
-}
-.contenido .c11 .title{ 
-    width: 100%;
-    position: absolute;
-    display: grid;
-    justify-content: center;
-    text-decoration: none;
-    bottom: 0;
-    opacity: 0;
-    transition: all 1.5s ease;
-}
-.contenido .c11 .title h5{
-    margin: 0 auto;
-}
-.contenido .c11:hover .title{
-    opacity:1;
-    color:white;
-} 
-
 /* c12 */
-.contenido .c12{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    min-height: 192px;
+.container .c12{
     background-image: url(../img/nick4.jpg);
-    background-size: contain;
-    grid-area: c12;
-    transition: all 1s ease;
-} 
-.contenido .c12:hover{
-    cursor: pointer;
-    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
-}
-.contenido .c12 .title{ 
-    width: 100%;
-    position: absolute;
-    display: grid;
-    justify-content: center;
-    text-decoration: none;
-    bottom: 0;
-    opacity: 0;
-    transition: all 1.5s ease;
-}
-.contenido .c12 .title h5{
-    margin: 0 auto;
-}
-.contenido .c12:hover .title{
-    opacity:1;
-    color:white;
-} 
-
+}  
 /* c13 */
-.contenido .c13{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    min-height: 192px;
+.container .c13{
     background-image: url(../img/pj1.jpg);
-    background-size: contain;
-    grid-area: c13;
-    transition: all 1s ease;
 } 
-.contenido .c13:hover{
-    cursor: pointer;
-    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
-}
-.contenido .c13 .title{ 
-    width: 100%;
-    position: absolute;
-    display: grid;
-    justify-content: center;
-    text-decoration: none;
-    bottom: 0;
-    opacity: 0;
-    transition: all 1.5s ease;
-}
-.contenido .c13 .title h5{
-    margin: 0 auto;
-}
-.contenido .c13:hover .title{
-    opacity:1;
-    color:white;
-} 
-
 /* c14 */
-.contenido .c14{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    min-height: 192px;
+.container .c14{
     background-image: url(../img/pj2.jpg);
-    background-size: contain;
-    grid-area: c14;
-    transition: all 1s ease;
-} 
-.contenido .c14:hover{
-    cursor: pointer;
-    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
-}
-.contenido .c14 .title{ 
-    width: 100%;
-    position: absolute;
-    display: grid;
-    justify-content: center;
-    text-decoration: none;
-    bottom: 0;
-    opacity: 0;
-    transition: all 1.5s ease;
-}
-.contenido .c14 .title h5{
-    margin: 0 auto;
-}
-.contenido .c14:hover .title{
-    opacity:1;
-    color:white;
 } 
 
 /* c15 */
-.contenido .c15{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    min-height: 192px;
+.container .c15{
     background-image: url(../img/pj3.jpg);
-    background-size: contain;
-    grid-area: c15;
-    transition: all 1s ease;
 } 
-.contenido .c15:hover{
-    cursor: pointer;
-    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
-}
-.contenido .c15 .title{ 
-    width: 100%;
-    position: absolute;
-    display: grid;
-    justify-content: center;
-    text-decoration: none;
-    bottom: 0;
-    opacity: 0;
-    transition: all 1.5s ease;
-}
-.contenido .c15 .title h5{
-    margin: 0 auto;
-}
-.contenido .c15:hover .title{
-    opacity:1;
-    color:white;
-} 
-
 /* c16 */
-.contenido .c16{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    min-height: 192px;
-    background-image: url(../img/pj4.jpg);
-    background-size: contain;
-    grid-area: c16;
-    transition: all 1s ease;
+.container .c16{
+    background-image: url(../img/pj4.jpg)
 } 
-.contenido .c16:hover{
-    cursor: pointer;
-    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
-}
-.contenido .c16 .title{ 
-    width: 100%;
-    position: absolute;
-    display: grid;
-    justify-content: center;
-    text-decoration: none;
-    bottom: 0;
-    opacity: 0;
-    transition: all 1.5s ease;
-}
-.contenido .c16 .title h5{
-    margin: 0 auto;
-}
-.contenido .c16:hover .title{
-    opacity:1;
-    color:white;
-} 
-
 /* c17 */
-.contenido .c17{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    min-height: 192px;
+.container .c17{
     background-image: url(../img/echo1.jpg);
-    background-size: contain;
-    grid-area: c17;
-    transition: all 1s ease;
 } 
-.contenido .c17:hover{
-    cursor: pointer;
-    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
-}
-.contenido .c17 .title{ 
-    width: 100%;
-    position: absolute;
-    display: grid;
-    justify-content: center;
-    text-decoration: none;
-    bottom: 0;
-    opacity: 0;
-    transition: all 1.5s ease;
-}
-.contenido .c17 .title h5{
-    margin: 0 auto;
-}
-.contenido .c17:hover .title{
-    opacity:1;
-    color:white;
-} 
-
 /* c18 */
-.contenido .c18{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    min-height: 192px;
+.container .c18{
     background-image: url(../img/echo2.jpg);
-    background-size: contain;
-    grid-area: c18;
-    transition: all 1s ease;
 } 
-.contenido .c18:hover{
-    cursor: pointer;
-    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
-}
-.contenido .c18 .title{ 
-    width: 100%;
-    position: absolute;
-    display: grid;
-    justify-content: center;
-    text-decoration: none;
-    bottom: 0;
-    opacity: 0;
-    transition: all 1.5s ease;
-}
-.contenido .c18 .title h5{
-    margin: 0 auto;
-}
-.contenido .c18:hover .title{
-    opacity:1;
-    color:white;
-} 
-
 /* c19 */
-.contenido .c19{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    min-height: 192px;
+.container .c19{
     background-image: url(../img/echo3.jpg);
-    background-size: contain;
-    grid-area: c19;
-    transition: all 1s ease;
 } 
-.contenido .c19:hover{
-    cursor: pointer;
-    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
-}
-.contenido .c19 .title{ 
-    width: 100%;
-    position: absolute;
-    display: grid;
-    justify-content: center;
-    text-decoration: none;
-    bottom: 0;
-    opacity: 0;
-    transition: all 1.5s ease;
-}
-.contenido .c19 .title h5{
-    margin: 0 auto;
-}
-.contenido .c19:hover .title{
-    opacity:1;
-    color:white;
-} 
-
 /* c20 */
-.contenido .c20{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    min-height: 192px;
+.container .c20{
     background-image: url(../img/echo4.jpg);
-    background-size: contain;
-    grid-area: c20;
-    transition: all 1s ease;
 } 
-.contenido .c20:hover{
-    cursor: pointer;
-    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
-}
-.contenido .c20 .title{ 
-    width: 100%;
-    position: absolute;
-    display: grid;
-    justify-content: center;
-    text-decoration: none;
-    bottom: 0;
-    opacity: 0;
-    transition: all 1.5s ease;
-}
-.contenido .c20 .title h5{
-    margin: 0 auto;
-}
-.contenido .c20:hover .title{
-    opacity:1;
-    color:white;
-} 
-
 /* c21 */
-.contenido .c21{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    min-height: 192px;
+.container .c21{
     background-image: url(../img/echo5.jpg);
-    background-size: contain;
-    grid-area: c21;
-    transition: all 1s ease;
 } 
-.contenido .c21:hover{
-    cursor: pointer;
-    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
-}
-.contenido .c21 .title{ 
-    width: 100%;
-    position: absolute;
-    display: grid;
-    justify-content: center;
-    text-decoration: none;
-    bottom: 0;
-    opacity: 0;
-    transition: all 1.5s ease;
-}
-.contenido .c21 .title h5{
-    margin: 0 auto;
-}
-.contenido .c21:hover .title{
-    opacity:1;
-    color:white;
-} 
-
 /* c22 */
-.contenido .c22{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    min-height: 192px;
+.container .c22{
     background-image: url(../img/echo6.jpg);
-    background-size: contain;
-    grid-area: c22;
-    transition: all 1s ease;
 } 
-.contenido .c22:hover{
-    cursor: pointer;
-    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
-}
-.contenido .c22 .title{ 
-    width: 100%;
-    position: absolute;
-    display: grid;
-    justify-content: center;
-    text-decoration: none;
-    bottom: 0;
-    opacity: 0;
-    transition: all 1.5s ease;
-}
-.contenido .c22 .title h5{
-    margin: 0 auto;
-}
-.contenido .c22:hover .title{
-    opacity:1;
-    color:white;
-} 
-
 /* c23 */
-.contenido .c23{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    min-height: 192px;
+.container .c23{
     background-image: url(../img/iggy1.jpg);
-    background-size: contain;
-    grid-area: c23;
-    transition: all 1s ease;
 } 
-.contenido .c23:hover{
-    cursor: pointer;
-    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
-}
-.contenido .c23 .title{ 
-    width: 100%;
-    position: absolute;
-    display: grid;
-    justify-content: center;
-    text-decoration: none;
-    bottom: 0;
-    opacity: 0;
-    transition: all 1.5s ease;
-}
-.contenido .c23 .title h5{
-    margin: 0 auto;
-}
-.contenido .c23:hover .title{
-    opacity:1;
-    color:white;
-} 
-
 /* c24 */
-.contenido .c24{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    min-height: 192px;
+.container .c24{
     background-image: url(../img/iggy2.jpg);
-    background-size: contain;
-    grid-area: c24;
-    transition: all 1s ease;
-} 
-.contenido .c24:hover{
-    cursor: pointer;
-    box-shadow: 300px 0 0 rgba(219, 54, 54, 0.503) inset;
-}
-.contenido .c24 .title{ 
-    width: 100%;
-    position: absolute;
-    display: grid;
-    justify-content: center;
-    text-decoration: none;
-    bottom: 0;
-    opacity: 0;
-    transition: all 1.5s ease;
-}
-.contenido .c24 .title h5{
-    margin: 0 auto;
-}
-.contenido .c24:hover .title{
-    opacity:1;
-    color:white;
 } 
 
-/*FIN GRILLA DE CONTENIDO*/
+/*FIN GRILLA DE container*/
 
-/*FOOTER C/ REDES SOCIALES*/
+/* MEDIA-QUERIES */
 
-footer{
-    position: absolute;
-    top: 30px;
-    width: 100%;
-   height: 450px;
+@media screen and (max-width: 1250px){
+    .header{
+      display: none;
+    }
+    footer{
+      opacity: 1;
+    }
 }
-footer .rabbit{
-    margin: 0 auto;
+@media screen and (max-width: 950px){
+    .container{
+        max-width: 630px;
+    }
+    .item{
+        width: calc( (100% - 30px) / 2);
+        margin-bottom: 20px;
+    }
+    .item:nth-child(odd){
+        margin-left: 7px;
+    }
 }
-footer .rabbit img{
- height: 100px;
+@media screen and (max-width: 650px){
+    .container{
+        max-width: 320px;
+    }
+    .item{
+        margin:0 0 20px 10px;
+        width: calc(100% - 20px);
+    }
 }
-footer .redes{
-    width: 100%;
-    height: min-content;
-} 
-footer .redes nav ul{
-    list-style: none;
-    margin: 20px 0 0 55px;
-}
-footer .redes nav ul li{
-    padding: 5px;
-    width: 40px;
-    height: 40px;
-}
-footer .redes nav ul li a{
-    font-size: 25px;
-    color: white;
-    display: block;
-    text-decoration: none;
-    transition: all 0.5s ease; 
-}
-li:hover{
-    cursor: pointer;
-    transform: scale(1.2);
-}
+
 .icon-facebook2:before, .icon-twitter:before, 
 .icon-instagram:before, .icon-soundcloud2:before,
 .icon-spotify:before, .icon-youtube:before{

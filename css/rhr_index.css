@@ -1,25 +1,39 @@
+/* font-family: 'Indie Flower', cursive;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Shadows Into Light', cursive;
+font-family: 'Bungee Inline', cursive;
+font-family: 'Monoton', cursive;
+font-family: 'UnifrakturMaguntia', cursive;*/
 body{
     margin: 0em;
     padding: 0em;
-   
-   
+    background-color: #f6f3ea;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .contenedor{
-    position: relative;
-    width: 520px;
-    height: 380px;
+    width: 286px;
+    height: 286px;
     margin: 100px auto;
-    
     transition: all 1.5s ease;
 }
-.rabbit{
-    font-family: monospace;
-    font-size: 7px;
-    text-align: center;
+.contenedor .a{
+    width: 286px;
+    height: 286px;
 }
-
-
 .contenedor:hover{
     cursor: pointer;
     transform: rotate(1080deg) scale(1.5);
 }
+.rabbit{
+    font-family:'Open Sans Condensed', sans-serif;
+    font-size: 7px;
+    text-align: center;
+   margin-top: 10%;
+} 
+
+

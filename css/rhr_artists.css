@@ -12,62 +12,50 @@
 /* font-family: 'Indie Flower', cursive;
 font-family: 'Open Sans Condensed', sans-serif;
 font-family: 'Shadows Into Light', cursive; */
-
 body{
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
   min-height: 100vh;
-  background-color: #f6f6f6; 
+  background-color: #f6f3ea; 
 } 
 .section{
+  clip-path: polygon(0 0, 0 calc(100% - 20vw), 50% 80%, 100% calc(100% - 20vw), 100% 0);
+  background-image: url(../img/3m.jpg);
+  background-attachment: fixed;
+  z-index: -1;
   width: 100%;
-  position:relative;
-  background-color: rgba(0, 0, 0, 0.965);
   height: 400px;
-  clip-path: polygon(0 0, 0 calc(100% - 17vw), 50% 90%, 100% calc(100% - 17vw), 100% 0);
 }
-.section .titulo{
-  font-size: 70px;
-  height:200px;
-  line-height: 200px;
-  max-width:100%;
-  letter-spacing: 10px;
-  word-spacing: 10px;
-  /* background-color: rgba(0, 0, 0, 0.605);
-  transform: skewY(-9deg); */
-}
-.section .titulo h1{
-  font-family: 'Open Sans Condensed', sans-serif;
-  margin: 70px auto;
+.section h1{
+  margin: 10px auto; 
   width: max-content;
-  color: rgb(245, 152, 12);
+  font-size: 5.5rem;
+  letter-spacing: 0.5rem;
+  word-spacing: 0.5rem;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: rgb(214, 133, 11);
 }
+
+/*HEADER*/
+
 .header{
-  position: relative;
-  background-color: rgba(15, 13, 13, 0.891);
-  clip-path: polygon(0 0, 0 100%, 100% 100%, 61% 33%, 100% 0);
-  width: 13%;
+  width: 8%;
   height: 800px;
   top: 0;
   left: 0;
-  display: block;
   position: fixed;
 }
 .header .logo img{
   background-color: rgba(228, 156, 24, 0.5);
   width: 100%;
-  
-  margin: 20px auto;
+  margin-top: 10px;
   clip-path: circle();
 }
 .header nav ul{
   list-style:none;
   padding: 3px;
-  margin: 350px 0 0 7px;
+  margin-top: 25px;
+  margin-left: 20px;
 } 
 .header nav ul li{
   display: block;
@@ -75,11 +63,10 @@ body{
   padding: 6px;
 }
 nav ul li a{
-  font-family:'Shadows Into Light', cursive; 
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 20px;
-  color: white;
+  color: black;
   text-decoration: none;
-  text-align: center;
   display: block;
   padding: 2px 4px;
   transition: all 0.5s ease; 
@@ -87,41 +74,87 @@ nav ul li a{
 nav ul li a:hover{
   color: #ff0101;
   transform: scale(1.3);
-  text-decoration: underline;
 }
 nav ul li a.activo{
   color: #ff0101;
   font-weight: bold;
-  text-decoration: underline; 
 }
 
 /* REDES SOCIALES */
 
 .header .redes{
   position: relative;
-  width: min-content;
-  height: min-content;
+  width: max-content;
+  height: max-content;
 } 
-.header .redes nav ul{
+.header .redes ul{
   position: absolute;
   list-style: none;
-  margin-left: 20px;
   margin-top: 40px;
 }
-.header .redes nav ul li{
+.header .redes ul li{
   padding: 5px;
   width: 40px;
   height: 40px;
   margin: 0;
 }
-.redes nav ul li a{
-  font-size: 25px;
-  color: white;
+.header .redes ul li a{
+  font-size: 20px;
+  color: black;
   display: block;
   text-decoration: none;
   transition: all 0.5s ease; 
 }
+.redes ul li a:hover{
+  color: #ff0101;
+  transform: scale(1.3);
+}
 
+/*FOOTER*/
+
+footer{
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(0, 0, 0); 
+  width: 100%;
+  padding: 0.5em;
+  opacity: 0;
+}
+footer ul{
+  list-style: none;
+  width: 30%;
+  padding: 0;
+}
+footer ul li a{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  padding: 2px 4px;
+  transition: all 0.5s ease; 
+}
+footer ul li a:hover{
+  color: #ff0101;
+}
+ul li a.activo{
+  color: #ff0101;
+  font-weight: bold;
+}
+footer .redes ul{
+  width: 20%;
+}
+footer .logo img{
+  margin: 1em;
+  width: 16em;
+}
+footer .logo img{
+  background-color: rgba(228, 156, 24, 0.5);
+  width: 270px;
+  margin-top: 10px;
+  clip-path: circle();
+}
+ 
 /* GRILLA */
 
 .container{
@@ -144,7 +177,7 @@ nav ul li a.activo{
 .item:nth-child(even){
   width: calc(70% - 10px);
   box-sizing: border-box;
-  background-image: url(../img/tdk.jpg); 
+  background-image: url(../img/tdk2.jpg); 
   background-size: cover;
   background-position: initial;
   position: relative;
@@ -184,7 +217,6 @@ nav ul li a.activo{
   width: 100%;
   text-align: center;
   letter-spacing: 5px;
-  width: 100%;
   height: 100%;
   display: flex;
   align-items: flex-end;
@@ -195,7 +227,7 @@ nav ul li a.activo{
   opacity: 0;
 }
 .item:nth-child(odd):hover{
- cursor: pointer;
+ /* cursor: pointer; */
  box-shadow: 300px 0 0 rgba(151, 7, 7, 0.693) inset;
 }
 .item:nth-child(odd):hover h3{
@@ -206,7 +238,7 @@ nav ul li a.activo{
 /* FOTOS */
 
 .item.uno{
-  background-image: url(../img/bowie.jpg); 
+  background-image: url(../img/bowie_bn.jpg); 
 }
 .item.tres{
   background-image: url(../img/stones2.jpg); 
@@ -219,47 +251,46 @@ nav ul li a.activo{
   background-position: left;
 }
 .item.nueve{
-  background-image: url(../img/echo.jpg); 
+  background-image: url(../img/nick5.jpg); 
 }
 .item.once{
-  background-image: url(../img/love2.jpg); 
+  background-image: url(../img/pj5.jpg); 
+  background-position: right;
 }
 
 /* MEDIA-QUERIES */
 
-@media screen and (max-width: 850px){
-  .container{
-      flex-direction: column;
+@media screen and (max-width: 1250px){
+  .header{
+    display: none;
   }
-  .item:nth-child(odd){
-      width: 100%;
-      position: relative;
-  }
-  .item:nth-child(even){
-      width: 100%;
-  } 
-  .item:nth-child(odd):hover{
-  cursor: pointer;
-  box-shadow: 850px 0 0 rgba(219, 54, 54, 0.503) inset;
-  }
-  .item.nueve{
-      background-image: url(img/echo.jpg); 
-      background-position: top;
-  }
-  .item.once{
-      background-image: url(img/love2.jpg); 
-      background-position: top;
-  }
-  .item:nth-child(odd) h3{
-      width: 100%;
-      position: absolute;
-      margin-top: -10px;
-  }
-  .item:nth-child(odd):hover h3{
-      opacity: 1;
+  footer{
+    opacity: 1;
   }
 }
-
+@media screen and (max-width: 850px){
+  .container{
+    flex-direction: column;
+  }
+  .item:nth-child(odd){
+    width: 100%;
+    position: relative;
+  }
+  .item:nth-child(even){
+    width: 100%;
+  } 
+  .item:nth-child(odd):hover{
+    box-shadow: 1000px 0 0 rgba(219, 54, 54, 0.503) inset;
+  }
+  .item:nth-child(odd) h3{
+    width: 100%;
+    position: absolute;
+    margin-top: -10px;
+  }
+  .item:nth-child(odd):hover h3{
+    opacity: 1;
+  }
+} 
 .icon-facebook2:before, .icon-twitter:before, 
 .icon-instagram:before, .icon-soundcloud2:before,
 .icon-spotify:before, .icon-youtube:before{

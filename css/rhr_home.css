@@ -15,26 +15,27 @@
 body{
   width: 100%;
   height: 100vh;
-  margin: 0;
-  padding: 0;
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-color: #f6f3ea;
 }
 .holder{
   width: max-content;
   height: max-content;
-  position: relative;
-}
-header{
-  background-image: url(../img/cassette.jpg);
-  width: 920px;
+} 
+
+.holder header{
+  background-image: url(../img/cassette_f6f3ea.jpg);
+  min-width: 920px;
   height:580px;
+  position: relative; 
 } 
 header h1{
   font-family: 'Shadows Into Light', cursive;
   color: rgb(85, 50, 50);
   font-size: 40px;
-  margin: 57px 0 0 250px;
+  margin: 57px 0 0 260px;
   position: absolute; 
 } 
 header nav ul{
@@ -47,7 +48,7 @@ header nav ul{
 header nav ul li{
   display: inline-block;
   width: 14%;
-  padding: 6px;
+  padding: 2px 6px;
 }
 nav ul li a{
   font-family:'Shadows Into Light', cursive;
@@ -62,50 +63,36 @@ nav ul li a{
 nav ul li a:hover{
   color: #ff0101;
   transform: scale(1.1);
-  text-decoration: underline;
 }
 nav ul li a.activo{
   color: #ff0101;
   font-weight: bold;
-  text-decoration: underline;
 }
 
-/*footer con redes sociales*/
+/* REDES SOCIALES */
 
-footer{
-  width: 50%;
-  margin: 10px auto;
-  position: relative;
-}
-footer .rabbit img{
-  width: 100px;
-  margin: 15px;
-  float: left;
-  transition: all 1s ease;
-}
-img:hover{
-  cursor: pointer;
-  transform: rotate(360deg) scale(1.2);
-}
-footer .redes{
-  width: 300px;
-  height: 100px;
-  float: right;
-} 
-footer .redes nav ul{
+.redes nav ul{
   list-style: none;
   display: flex;
   padding: 0;
-  margin: 35px;
+  margin: 352px 0 0  80px;
+ 
+  width: min-content;
+  height: min-content;
 }
-footer .redes nav ul li{
-  padding: 10px;
-  width: 50px;
-  height: 50px;
+.redes nav ul li{
+  padding: 3px;
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
 }
-footer .redes nav ul li a{
+.redes nav ul li a{
   font-size: 25px;
-  color: black;
+  width: 30px;
+  height: 30px;
+  color: rgb(41, 22, 22);
   display: block;
   text-decoration: none;
   transition: all 0.5s ease; 
@@ -114,6 +101,12 @@ li:hover{
   cursor: pointer;
   transform: scale(1.2);
 }
+
+@media screen and (max-width: 850px){
+  .holder{
+    transform: rotate(-90deg);
+  }
+}  
 
 .icon-facebook2:before, .icon-twitter:before, 
 .icon-instagram:before, .icon-soundcloud2:before,
