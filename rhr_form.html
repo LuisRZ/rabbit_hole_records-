@@ -14,36 +14,22 @@
     <link rel="stylesheet" href="css/rhr_form.css">
 </head>
 <body>
-    <form action="" method="">
-        <h2>Contact Us</h2>
-        <input type="text" name="nombre" placeholder="Name" required>
-        <input type="text" name="correo" placeholder="Email" required>
-        <input type="text" name="telefono" placeholder="Phone" required>
-        <textarea name="mensaje" placeholder="Leave a comment" required></textarea>
+    <form action="" method="" class="formulario" id="formulario">
+        <h2>CONTACT US</h2>
+        <input type="text" id="nombre" name="nombre" placeholder="Name"  autofocus required>
+        <input type="email" id="email" name="correo" placeholder="Email" required>
+        <input type="text" id="tel" name="tel" placeholder="Phone" required>
+        <textarea id="comentario" name="comentario" placeholder="Leave a comment" required></textarea>
         <input type="submit" value="Send" id="boton">
     </form>
     <footer>
         <div class="rabbit">
             <a href="rhr_home.html"><img src="img/rabbitlogo6.png" alt="rabbit"></a>
-
-            <div class="redes">
-                <nav>
-                    <ul>
-                        <li><a class="face icon-facebook2" href="https://www.facebook.com" target="_blank"></a></li>
-                        <li><a class="twit icon-twitter" href="https://www.twitter.com" target="_blank"></a></li>
-                        <li><a class="insta icon-instagram" href="https://www.instagram.com" target="_blank"></a>
-                        </li>
-                        <li><a class="sound icon-soundcloud2" href="https://www.soundcloud.com" target="_blank"></a>
-                        </li>
-                        <li><a class="spoty icon-spotify" href="https://www.spotify.com" target="_blank"></a></li>
-                        <li><a class="ytube icon-youtube" href="https://www.youtube.com" target="_blank"></a></li>
-                    </ul>
-                </nav>
-
-            </div>
-
         </div>
     </footer>
-    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/messages_es.js "></script>
+    <script src="js/rhr_form.js"></script>
 </body>
 </html>

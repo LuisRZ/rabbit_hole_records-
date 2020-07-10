@@ -1,0 +1,20 @@
+{
+  "name": "rabbit_hole_records",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisRZ/rabbit_hole_records-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuisRZ/rabbit_hole_records-/issues"
+  },
+  "homepage": "https://github.com/LuisRZ/rabbit_hole_records-#readme"
+}
